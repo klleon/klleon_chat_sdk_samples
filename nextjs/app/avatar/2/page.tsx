@@ -1,12 +1,9 @@
 "use client";
 import {useRouter} from 'next/navigation';
 import {useEffect} from 'react';
-import {useChatContext} from '../../providers/chat_context';
 
-
-export default function AvatarPage2() {
+export default function AvatarPage1() {
     const {push} = useRouter();
-    const {isChatEventListenerAdded, setChatEventListenerAdded} = useChatContext();
 
     function showStreaming(avatarId: string) {
         KlleonChat.showStreaming({
@@ -24,23 +21,17 @@ export default function AvatarPage2() {
     }
 
     useEffect(() => {
-        const randomNum = Math.floor(Math.random() * 100);
-
         async function initializeApp() {
             await init();
             showStreaming('35276726-4441-11ef-8ee1-0abbf354c5cc');
             KlleonChat.showChatUi();
-
-            if (!isChatEventListenerAdded) {
-                KlleonChat.onChatEvent((data) => {
-                    console.log(`구분 ${randomNum} : `, data);
-                });
-                setChatEventListenerAdded(true);
-            }
+            KlleonChat.onChatEvent((data) => {
+                console.log(data);
+            });
         }
 
         initializeApp();
-    }, [isChatEventListenerAdded, setChatEventListenerAdded]);
+    }, []);
 
     return (
         <div>
@@ -49,7 +40,7 @@ export default function AvatarPage2() {
                 id="buttons-container"
                 style={{
                     position: 'fixed',
-                    bottom: '20px',
+                    bottom: '60px',
                     left: '50%',
                     transform: 'translateX(-50%)',
                 }}
