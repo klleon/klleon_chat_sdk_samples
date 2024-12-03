@@ -9,7 +9,7 @@ export default function AvatarPage1() {
         KlleonChat.showStreaming({
             avatar_id: avatarId,
             fit: 'contain',
-            enable_microphone: false,
+            enable_microphone: true,
         });
     }
 

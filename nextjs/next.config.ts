@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
         SDK_KEY: process.env.SDK_KEY,
     },
     reactStrictMode: false,
+    output: 'export',
 };
 
 export default nextConfig;
