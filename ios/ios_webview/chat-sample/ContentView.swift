@@ -25,7 +25,7 @@ class ViewController: UIViewController, WKUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string: "https://sdk-v1-sample.klleon.io/")
+        let myURL = URL(string: "https://your-sdk-page-url.com/)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
