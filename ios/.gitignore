@@ -1,0 +1,46 @@
+# User-specific files
+*.xcuserdata
+*.xcuserstate
+
+# Xcode workspace
+*.xcworkspace
+
+# Build results
+DerivedData/
+build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build
+
+# Swift Package Manager
+/.swiftpm
+/Package.resolved
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Thumbnails
+._*
+Thumbs.db
+
+# Background image
+desktop.ini
+
+# AppleDouble resource fork files
+.AppleDouble
+
